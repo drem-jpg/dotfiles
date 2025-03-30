@@ -14,9 +14,9 @@
         "custom/pacman",
         "pulseaudio",
         "network",
-        "battery",
         "cpu",
-				"clock",
+        "battery",
+	"clock",
         "custom/power"
 		],
 		"hyprland/window": {
