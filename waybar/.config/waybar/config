@@ -1,0 +1,111 @@
+{
+    "layer": "top",
+    "height": 32,
+    "spacing": 5,
+    // Choose the order of the modules
+    "modules-left": [
+        "hyprland/workspaces"
+    ],
+    "modules-center": [
+        "hyprland/window"
+    ],
+    "modules-right": [
+				"tray",
+        "custom/pacman",
+        "pulseaudio",
+        "network",
+        "battery",
+        "cpu",
+				"clock",
+        "custom/power"
+		],
+		"hyprland/window": {
+      "format": "  {}",
+      "rotate": 0,
+			"separate-outputs": true,
+      "rewrite": {
+        "khing@archlinux:(.*)": "$1 ",
+        "(.*) — Mozilla Firefox": "$1 󰈹",
+        "(.*)Mozilla Firefox": "Firefox 󰈹",
+        "(.*)VSCodium": "VSCodium ",
+        "(.*) — Thunar": "$1 󰉋",
+        "(.*)lf": "lf 󰉋",
+        "(.*)Spotify": "Spotify 󰓇",
+        "(.*)Steam": "Steam 󰓓",
+        "(.*) - Discord": "$1  ",
+        "(.*)Netflix": "Netflix 󰝆 ",
+        "(.*) — YouTube": "YouTube ",
+        "(.*) — Google chrome": "$1  ",
+        "(.*)Google chrome": "Google Chrome  ",
+        "(.*) — Github": "$1  ",
+        "(.*)Github": "GitHub ",
+        "(.*)Spotify Free": "Spotify 󰓇",
+        "(.*)Spotify Premium": "Spotify 󰓇",
+        "(.*)nvim": "Neovim "
+        },
+        "max-length": 50
+		},
+
+    "hyprland/workspaces": {
+        "disable-scroll": true,
+        "all-outputs": true,
+        "on-click": "activate"
+    },
+
+    "tray": {
+        // "icon-size": 21,
+        "spacing": 10
+    },
+		"custom/pacman": {
+      "format": "󰏔",
+			"interval": 3600,
+			"return-type": "json",
+			"on-click": "kitty -e paru; pkill -SIGRTMIN+8 waybar",
+      "tooltip-format": "Update All",
+			"signal": 20
+		},
+    "cpu": {
+      "interval": 10,
+      "format": "󰍛",
+      "rotate": 0,
+      "format-alt": "{icon0}{icon1}{icon2}{icon3}",
+      "on-click-right": "kitty -e btop",
+      "format-icons": ["▁", "▂", "▃", "▄", "▅", "▆", "▇", "█"]
+    },
+    "clock": {
+        "tooltip-format": "{:%A, %B %d, %Y}",
+        "format": "{:%I:%M %p}"
+    },
+    "battery": {
+        "states": {
+            "warning": 20
+        },
+        "format": "{icon}",
+        "format-icons": [ "󰂎", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹" ],
+        "format-charging": "󰂄",
+        "format-warning": "󰂃",
+				"tooltip-format": "{capacity}% capacity"
+    },
+    "network": {
+        "format-wifi": "󰤨",
+        "format-ethernet": "󰈀",
+        "format-disconnected": "󰤭",
+				"tooltip-format": "Network: <big><b>{essid}</b></big>\nSignal strength: <b>{signaldBm}dBm ({signalStrength}%)</b>\nFrequency: <b>{frequency}MHz</b>\nInterface: <b>{ifname}</b>\nIP: <b>{ipaddr}/{cidr}</b>\nGateway: <b>{gwaddr}</b>\nNetmask: <b>{netmask}</b>",
+        "format-linked": "󰈀 {ifname} (No IP)",
+				"on-click": "kitty -e nmtui"
+    },
+    "pulseaudio": {
+        "scroll-step": 1,
+        "format": "{icon}",
+        "format-muted": "",
+				"format-icons": {
+					"default": ["", "", ""]
+				},
+        "on-click": "pavucontrol",
+				"tooltip-format": "{volume}% volume"
+		},
+    "custom/power": {
+        "format": "󰐥",
+        "on-click": "sleep 0.15 && exec powermenu"
+    }
+}
