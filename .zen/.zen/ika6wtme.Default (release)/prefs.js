@@ -97,7 +97,7 @@ user_pref("doh-rollout.doneFirstRun", true);
 user_pref("doh-rollout.home-region", "US");
 user_pref("doh-rollout.skipHeuristicsCheck", true);
 user_pref("dom.forms.autocomplete.formautofill", true);
-user_pref("dom.push.userAgentID", "be3eafa2eb414f24921cb0a8c1963fd5");
+user_pref("dom.push.userAgentID", "a5d1db074560487d9d716f26e2ab0719");
 user_pref("dom.security.https_only_mode_ever_enabled", true);
 user_pref("extensions.activeThemeID", "firefox-compact-dark@mozilla.org");
 user_pref("extensions.blocklist.pingCountVersion", -1);
