@@ -75,7 +75,7 @@ button {
 /* https://github.com/Alexays/Waybar/wiki/FAQ#the-workspace-buttons-have-a-strange-hover-effect */
 
 #workspaces button:hover {
-    color: @blue;
+    color: @mauve;
     box-shadow: inherit;
     text-shadow: inherit;
     background: @crust;
@@ -90,15 +90,15 @@ button {
 }
 
 #workspaces button.selected {
-    color: @blue;
-}
-
-#workspaces button.active {
     color: @mauve;
 }
 
+#workspaces button.active {
+    color: @blue;
+}
+
 #workspaces button.urgent {
-    color: @red;
+    color: @red
 }
 
 #clock,
@@ -139,12 +139,12 @@ button {
   color: @text;
 }
 
-#custom-pacman {
-  color: @peach;
-}
-
 #custom-wallpaper {
   color: @sky;
+}
+
+#custom-pacman {
+  color: @peach;
 }
 
 #pulseaudio {
