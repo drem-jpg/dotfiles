@@ -203,3 +203,15 @@ false
 0
 true
 #
+
+https://waifuxl.com/
+https://waifuxl.com/sw.js
+true
+{6ba4cf20-0ceb-4045-86ed-89b38cbee2ae}
+0
+1743370849991872
+1743370849998001
+1743370840999433
+0
+true
+#

@@ -112,6 +112,7 @@ button {
 #pulseaudio,
 #wireplumber,
 #custom-pacman,
+#custom-wallpaper,
 #custom-power,
 #tray,
 #mode,
@@ -140,6 +141,10 @@ button {
 
 #custom-pacman {
   color: @peach;
+}
+
+#custom-wallpaper {
+  color: @sky;
 }
 
 #pulseaudio {

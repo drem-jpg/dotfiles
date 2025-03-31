@@ -11,12 +11,13 @@
     ],
     "modules-right": [
 				"tray",
+        "custom/wallpaper",
         "custom/pacman",
         "pulseaudio",
         "network",
         "cpu",
         "battery",
-	"clock",
+	      "clock",
         "custom/power"
 		],
 		"hyprland/window": {
@@ -58,11 +59,10 @@
     },
 		"custom/pacman": {
       "format": "󰏔",
-			"interval": 3600,
 			"return-type": "json",
 			"on-click": "kitty -e paru; pkill -SIGRTMIN+8 waybar",
       "tooltip-format": "Update All",
-			"signal": 20
+			"signal": 8
 		},
     "cpu": {
       "interval": 10,
@@ -99,11 +99,16 @@
         "format": "{icon}",
         "format-muted": "",
 				"format-icons": {
-					"default": ["", "", ""]
+					"default": ["","",""]
 				},
         "on-click": "pavucontrol",
 				"tooltip-format": "{volume}% volume"
 		},
+    "custom/wallpaper": {
+        "format": "",
+        "tooltip-format": "Change Wallpaper",
+        "on-click": "waypaper"
+      },
     "custom/power": {
         "format": "󰐥",
         "on-click": "sleep 0.15 && exec powermenu"
