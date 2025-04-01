@@ -21,7 +21,7 @@ style = "Italic"
 
 [font.normal]
 family = "Maple Mono"
-style = "Normal"
+style = "Regular"
 
 [scrolling]
 history = 5000
