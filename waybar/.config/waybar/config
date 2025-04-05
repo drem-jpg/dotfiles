@@ -55,7 +55,7 @@
 
     "tray": {
         // "icon-size": 21,
-        "spacing": 6
+        "spacing": 15
     },
 		"custom/pacman": {
       "format": "󰏔",
