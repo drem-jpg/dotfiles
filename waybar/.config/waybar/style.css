@@ -75,7 +75,7 @@ button {
 /* https://github.com/Alexays/Waybar/wiki/FAQ#the-workspace-buttons-have-a-strange-hover-effect */
 
 #workspaces button:hover {
-    color: @mauve;
+    color: @blue;
     box-shadow: inherit;
     text-shadow: inherit;
     background: @crust;
@@ -94,7 +94,7 @@ button {
 }
 
 #workspaces button.active {
-    color: @blue;
+    color: @mauve;
 }
 
 #workspaces button.urgent {
