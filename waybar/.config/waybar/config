@@ -80,11 +80,11 @@
         "states": {
             "warning": 20
         },
-        "format": "{icon}",
+        "format": "{icon}  {capacity}%",
         "format-icons": [ "󰂎", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹" ],
         "format-charging": "󰂄",
         "format-warning": "󰂃",
-				"tooltip-format": "{capacity}% capacity"
+				"tooltip-format": "{capacity}% charged"
     },
     "network": {
         "format-wifi": "󰤨",

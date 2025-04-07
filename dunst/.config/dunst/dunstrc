@@ -81,6 +81,6 @@
 
 [backlight]
     appname = "Backlight"
-    highlight = "#eba0ac"
+    highlight = "#cba6f7"
 
 # vim: ft=cfg
