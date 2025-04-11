@@ -23,7 +23,7 @@
     sort = yes
     idle_threshold = 120
 
-    font = Maple Mono 10
+    font = JetBrainsMono Nerd Font 10
     line_height = 0
     markup = full
     format = "<span weight='bold' font='12'>%s</span>\n%b"
@@ -56,31 +56,31 @@
     per_monitor_dpi = false
 
 [urgency_low]
-    background = "#181825"
-    foreground = "#CDD6F4"
-    highlight = "#CDD6F4"
-    frame_color = "#181825"
+    background = "#2e3440"
+    foreground = "#d8dee9"
+    highlight = "#d8dee9"
+    frame_color = "#2e3440"
     timeout = 5
 
 [urgency_normal]
-    background = "#181825"
-    foreground = "#CDD6F4"
-    highlight = "#CDD6F4"
-    frame_color = "#181825"
+    background = "#2e3440"
+    foreground = "#d8dee9"
+    highlight = "#d8dee9"
+    frame_color = "#2e3440"
     timeout = 5
 
 [urgency_critical]
-    background = "#181825"
-    foreground = "#CDD6F4"
-    frame_color = "#f38ba8"
+    background = "#2e3440"
+    foreground = "#d8dee9"
+    frame_color = "#bf616a"
     timeout = 1000
 
 [volume]
     appname = "Volume"
-    highlight = "#cba6f7"
+    highlight = "#5e81ac"
 
 [backlight]
     appname = "Backlight"
-    highlight = "#cba6f7"
+    highlight = "#88c0d0"
 
 # vim: ft=cfg

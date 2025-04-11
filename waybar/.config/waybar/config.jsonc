@@ -1,16 +1,16 @@
 {
   "position": "top",
   "layer": "top",
-  "height": 16,
+  "height": 14,
 
   "modules-left": ["custom/launcher","custom/playerctl","custom/playerlabel","cava","hyprland/window"],
   "modules-center": ["hyprland/workspaces"],
-  "modules-right": ["tray","network","memory","cpu","custom/pacmanAlt","pulseaudio","battery", "clock"],
+  "modules-right": ["tray","network","cpu","custom/pacmanAlt","pulseaudio","battery", "clock"],
 
   "custom/launcher": {
     "format": "󰣇",
     "on-click": "tofi-drun",
-    "tooltip": "Tofi"
+    "tooltip-format": "App Launcher"
   },
    "hyprland/language": {
   "format": " {}",
@@ -104,7 +104,7 @@
   },
   
   "pulseaudio": {
-    "format": "<span size='12000'>{icon}</span> {volume}%",
+    "format": "<span size='12000'>{icon}</span>  {volume}%",
     "format-muted": "<span size='12000' foreground='#ff7eb6'></span> {volume}%",
     "format-icons": {
         "headphone": "",
@@ -151,14 +151,15 @@
           "(.*) - Mozilla Firefox": "󰈹 $1",
           "(.*) - Thunar": " $1",
           "(.*) - mpv": " $1",
-          "(.*) - Discord": "  $1",
-          "(.*) - Spotify Free": " $1",
+          "(.*) - Discord": " $1",
+          "(.*)Spotify Free": " Spotify",
+          "(.*)Steam": " Steam",
           
-          "(.*) - fish": " [$1]",
+          "(.*) - zsh": " [$1]",
           "(.*) - wezterm": " [$1]",
           "(.*) - kitty": " [$1]",
           "(.*) - nautilus": " $1",
-          "(.*) - ghostty": " $1"
+          "(.*) - ghostty": " $1"
 
           
       },
@@ -169,23 +170,24 @@
         "format": "󰏔 {}",
         "interval": 3600,
         "exec": "checkupdates | wc -l",
-        "on-click": "ghostty -e paru",
+        "on-click": "hyprctl dispatch exec '[float]' 'ghostty -e paru'",
         "tooltip": false        
       },
   "network": {
         "format-wifi": "󰤨 {essid}",
         "format-disconnected": "󰤭",
-        "format-ethernet": "󰈀",
+        "format-ethernet": "󰈀 wl3ps0",
         "on-click": "hyprctl dispatch exec '[float]' 'ghostty -e nmtui'"
       },
   "battery": {
         "states": {
-            "warning": 20
+            "warning": 20,
+            "critical": 10
         },
-        "format": "{icon}",
+        "format": "{icon} {capacity}%",
         "format-icons": ["󰁺", "󰁺", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"],
-        "format-charging": "󰂄",
-        "format-warning": "󰂃",
+        "format-charging": "󰂄 {capacity}%",
+        "format-warning": "󰂃 {capacity}%",
         "tooltip-format": "{capacity}% charged"
       },
 }
