@@ -1,114 +1,181 @@
 {
-    "layer": "top",
-    "height": 30,
-    "spacing": 3,
-    // Choose the order of the modules
-    "modules-left": [
-        "hyprland/workspaces"
-    ],
-    "modules-center": [
-        "hyprland/window"
-    ],
-    "modules-right": [
-				"tray",
-        "pulseaudio",
-        "network",
-        "cpu",
-        "battery",
-	      "clock",
-        "custom/power"
-		],
-		"hyprland/window": {
-      "format": "  {}",
-      "rotate": 0,
-			"separate-outputs": true,
-      "rewrite": {
-        "khing@archlinux:(.*)": "$1 ",
-        "(.*) — Mozilla Firefox": "$1 󰈹",
-        "(.*)Mozilla Firefox": "Firefox 󰈹",
-        "(.*)VSCodium": "VSCodium ",
-        "(.*) — Thunar": "$1 󰉋",
-        "(.*)lf": "lf 󰉋",
-        "(.*)Spotify": "Spotify 󰓇",
-        "(.*)Steam": "Steam 󰓓",
-        "(.*) - Discord": "$1  ",
-        "(.*)Netflix": "Netflix 󰝆 ",
-        "(.*) — YouTube": "YouTube ",
-        "(.*) — Google chrome": "$1  ",
-        "(.*)Google chrome": "Google Chrome  ",
-        "(.*) — Github": "$1  ",
-        "(.*)Github": "GitHub ",
-        "(.*)Spotify Free": "Spotify 󰓇",
-        "(.*)Spotify Premium": "Spotify 󰓇",
-        "(.*)nvim": "Neovim "
-        },
-        "max-length": 50
-		},
+  "position": "top",
+  "layer": "top",
+  "height": 16,
 
-    "hyprland/workspaces": {
-        "disable-scroll": true,
-        "all-outputs": true,
-        "on-click": "activate"
-    },
+  "modules-left": ["custom/launcher","custom/playerctl","custom/playerlabel","cava","hyprland/window"],
+  "modules-center": ["hyprland/workspaces"],
+  "modules-right": ["tray","network","memory","cpu","custom/pacmanAlt","pulseaudio","clock"],
 
-    "tray": {
-        // "icon-size": 21,
-        "spacing": 15
-    },
-		"custom/pacman": {
-      "format": "󰏔",
-			"return-type": "json",
-			"on-click": "ghostty -e paru; pkill -SIGRTMIN+8 waybar",
-      "tooltip-format": "Update All",
-			"signal": 8
-		},
-    "cpu": {
-      "interval": 10,
-      "format": "󰍛",
-      "rotate": 0,
-      "format-alt": "{icon0}{icon1}{icon2}{icon3}",
-      "on-click-right": "ghostty -e btop",
-      "format-icons": ["▁", "▂", "▃", "▄", "▅", "▆", "▇", "█"]
-    },
-    "clock": {
-        "tooltip-format": "{:%A, %B %d, %Y}",
-        "format": "{:%I:%M %p}"
-    },
-    "battery": {
-        "states": {
-            "warning": 20
-        },
-        "format": "{icon} {capacity}%",
-        "format-icons": [ "󰂎", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹" ],
-        "format-charging": "󰂄",
-        "format-warning": "󰂃",
-				"tooltip-format": "{capacity}% charged"
-    },
-    "network": {
-        "format-wifi": "󰤨 {essid}",
-        "format-ethernet": "󰈀",
-        "format-disconnected": "󰤭",
-				"tooltip-format": "Network: <big><b>{essid}</b></big>\nSignal strength: <b>{signaldBm}dBm ({signalStrength}%)</b>\nFrequency: <b>{frequency}MHz</b>\nInterface: <b>{ifname}</b>\nIP: <b>{ipaddr}/{cidr}</b>\nGateway: <b>{gwaddr}</b>\nNetmask: <b>{netmask}</b>",
-        "format-linked": "󰈀 {ifname} (No IP)",
-				"on-click": "ghostty -e nmtui"
-    },
-    "pulseaudio": {
-        "scroll-step": 1,
-        "format": "{icon}",
-        "format-muted": "",
-				"format-icons": {
-					"default": ["","",""]
-				},
-        "on-click": "pavucontrol",
-				"tooltip-format": "{volume}% volume"
-		},
-    "custom/wallpaper": {
-        "format": "",
-        "tooltip-format": "Change Wallpaper",
-        "on-click": "waypaper"
+  "custom/launcher": {
+    "format": "󰣇",
+    "on-click": "tofi-drun",
+    "tooltip": "Tofi"
+  },
+   "hyprland/language": {
+  "format": " {}",
+  "format-en": "en",
+  "format-fr": "fr",
+  "on-click": "hyprctl switchxkblayout logitech-craft next",
+  "keyboard-name": "logitech-craft"
+},
+      
+"tray": {
+      "icon-size": 21,
+      "spacing": 10
+},
+  
+"cava": {
+ //     "cava_config": "$XDG_CONFIG_HOME/cava/config",
+      "framerate": 30,
+      "autosens": 1,
+      "sensitivity": 1,
+      "bars": 14,
+      "lower_cutoff_freq": 50,
+      "higher_cutoff_freq": 10000,
+      "method": "pulse",
+      "source": "auto",
+      "stereo": true,
+      "reverse": false,
+      "bar_delimiter": 0,
+      "monstercat": false,
+      "waves": false,
+      "noise_reduction": 0.77,
+      "input_delay": 2,
+      "format-icons" : ["▁", "▂", "▃", "▄", "▅", "▆", "▇", "█" ],
+      "actions": {
+                 "on-click-right": "mode"
+                 }
+  },
+"clock": {
+      "interval": 1,    
+      "format": "󰃭 {:%B %d  %H:%M}",
+      "format-alt": " {:%H:%M}",
+      "on-click-middle": "gnome-calendar",
+      "tooltip-format": "\n<span size='14pt' font='JetBrains Mono ExtraBold'>{calendar}</span>",
+      "calendar": {
+                  "mode"          : "month",
+                  "mode-mon-col"  : 3,
+                  "on-scroll"     : 1,
+                  "on-click-right": "mode",
+                  "format": {
+                            "months":     "<span color='#5e81ac'><b>{}</b></span>",
+                            "days":       "<span color='#88c0d0'><b>{}</b></span>",
+                            "weekdays":   "<span color='#d08770'><b>{}</b></span>",
+                            "today":      "<span color='#bf616a'><b><u>{}</u></b></span>"
+                            }
+                  }
+  },
+  "hyprland/workspaces": {
+    "active-only": false,
+    "all-outputs": true,
+    "disable-scroll": false,
+    "on-scroll-up": "hyprctl dispatch workspace e-1",
+    "on-scroll-down": "hyprctl dispatch workspace e+1",
+    "format": "{icon}",
+    "on-click": "activate",
+    "format-icons": {
+      "urgent": "",
+      "active": "",
+      "default": "",
       },
-    "custom/power": {
-        "format": "󰐥",
-        "on-click": "sleep 0.15 && exec powermenu"
-    }
+    "sort-by-number": true,
+  },
+  "custom/playerctl": {
+    "format": "{icon}",
+    "return-type": "json",
+    "exec": "playerctl --player=mpd -a metadata --format '{\"text\": \"{{artist}} - {{markup_escape(title)}}\", \"tooltip\": \"{{playerName}} : {{markup_escape(title)}}\", \"alt\": \"{{status}}\", \"class\": \"{{status}}\"}' -F",
+    "on-click": "playerctl --player=mpd play-pause",
+    "on-click-middle": "playerctl --player=mpd previous",
+    "on-click-right": "playerctl --player=mpd next",
+    "format-icons": {
+      "Playing": "<span foreground='#46c880'> </span>",
+      "Paused": "<span foreground='#cdd6f4'> </span>",
+    },
+  },
+  "custom/playerlabel": {
+    "format": "<span>{}</span>",
+    "return-type": "json",
+    "max-length": 48,
+    "exec": "playerctl --player=mpd -a metadata --format '{\"text\": \"{{title}} - {{markup_escape(artist)}}\", \"tooltip\": \"{{playerName}} : {{markup_escape(artist)}}\", \"alt\": \"{{status}}\", \"class\": \"{{status}}\"}' -F",
+    "on-click": "playerctl --player=mpd play-pause",
+    "on-click-middle": "playerctl --player=mpd previous",
+    "on-click-right": "playerctl --player=mpd next",
+  },
+  
+  "pulseaudio": {
+    "format": "<span size='12000'>{icon}</span> {volume}%",
+    "format-muted": "<span size='12000' foreground='#ff7eb6'></span> {volume}%",
+    "format-icons": {
+        "headphone": "",
+        "hands-free": "",
+        "headset": "",
+        "phone": "",
+        "portable": "",
+        "car": "",
+        "default": ["", ""],
+    },
+    "on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
+    "on-click-right": "pavucontrol"
+  },
+
+  "tray": {
+      "icon-size": 16,
+      "spacing": 8,
+  },
+
+  "memory": {
+    "format": "󰍛 {}%",
+    "format-alt": " {used}/{total} GiB",
+    "interval": 5,
+    "on-click-right": "ghostty -e btop"
+  },
+  "cpu": {
+    "format": " {usage}%",
+    "format-alt": "󰍛 {avg_frequency} GHz",
+    "interval": 5,
+    "on-click-right": "ghostty -e btop"
+  },
+  "disk": {
+    "format": "󰋊 {}%",
+    "format-alt": "󰋊 {used}/{total} GiB",
+    "interval": 20,
+    "path": "/"
+  },
+
+     "hyprland/window": {
+      "format": "{}",
+          "max-length": 25,
+      "rewrite": {
+          "(.*) - Brave": "🌎 $1",
+          "(.*) - Mozilla Firefox": "󰈹 $1",
+          "(.*) - Thunar": " $1",
+          "(.*) - mpv": " $1",
+          "(.*) - Discord": "  $1",
+          "(.*) - Spotify Free": " $1",
+          
+          "(.*) - fish": " [$1]",
+          "(.*) - wezterm": " [$1]",
+          "(.*) - kitty": " [$1]",
+          "(.*) - nautilus": " $1",
+          "(.*) - ghostty": " $1"
+
+          
+      },
+      "separate-outputs": true
+  },
+
+  "custom/pacmanAlt": {
+        "format": "󰏔 {}",
+        "interval": 3600,
+        "exec": "checkupdates | wc -l",
+        "on-click": "ghostty -e paru",
+        "tooltip": false        
+      },
+  "network": {
+        "format-wifi": "󰤨 {essid}",
+        "format-disconnected": "󰤭",
+        "format-ethernet": "󰈀",
+        "on-click": "ghostty -e nmtui"
+  },
 }
