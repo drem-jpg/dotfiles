@@ -5,7 +5,7 @@
 
   "modules-left": ["custom/launcher","custom/playerctl","custom/playerlabel","cava","hyprland/window"],
   "modules-center": ["hyprland/workspaces"],
-  "modules-right": ["tray","network","memory","cpu","custom/pacmanAlt","pulseaudio","clock"],
+  "modules-right": ["tray","network","memory","cpu","custom/pacmanAlt","pulseaudio","battery", "clock"],
 
   "custom/launcher": {
     "format": "󰣇",
@@ -176,6 +176,16 @@
         "format-wifi": "󰤨 {essid}",
         "format-disconnected": "󰤭",
         "format-ethernet": "󰈀",
-        "on-click": "ghostty -e nmtui"
-  },
+        "on-click": "hyprctl dispatch exec '[float]' 'ghostty -e nmtui'"
+      },
+  "battery": {
+        "states": {
+            "warning": 20
+        },
+        "format": "{icon}",
+        "format-icons": ["󰁺", "󰁺", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"],
+        "format-charging": "󰂄",
+        "format-warning": "󰂃",
+        "tooltip-format": "{capacity}% charged"
+      },
 }

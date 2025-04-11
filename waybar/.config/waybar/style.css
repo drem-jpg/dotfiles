@@ -54,6 +54,7 @@ window#waybar {
 #memory,
 #disk,
 #cava,
+#battery,
 #language,
 #windows,
 
@@ -70,7 +71,7 @@ window#waybar {
 
 #custom-pacmanAlt{
     background-color: #2e3440;
-    color: #a3be8c;
+    color: #d08770;
     border-radius: 16px;
     margin: 5px;
     margin-left: 5px;

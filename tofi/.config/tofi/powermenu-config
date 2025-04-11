@@ -1,12 +1,12 @@
 prompt-text = "  "
 
-text-color = #cdd6f4
-prompt-color = #f38ba8
-selection-background = #cba6f7
+text-color = #eceff4
+prompt-color = #eceff4
+selection-background = #88c0d0
 selection-background-padding = 10, 16
 selection-background-corner-radius = 10
 selection-color = #1e1e2e
-background-color = #181825dd
+background-color = #2e3440
 
 width = 100%
 height = 100%
