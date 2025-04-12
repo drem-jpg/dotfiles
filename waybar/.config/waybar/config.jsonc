@@ -177,7 +177,7 @@
         "format-wifi": "󰤨 {essid}",
         "format-disconnected": "󰤭",
         "format-ethernet": "󰈀 wl3ps0",
-        "on-click": "hyprctl dispatch exec '[float]' 'ghostty -e nmtui'"
+        "on-click": "rofi-wifi-menu"
       },
   "battery": {
         "states": {
