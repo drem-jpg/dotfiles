@@ -9,7 +9,7 @@
 
   "custom/launcher": {
     "format": "󰣇",
-    "on-click": "tofi-drun",
+    "on-click": "rofi -show drun -show-icons",
     "tooltip-format": "App Launcher"
   },
    "hyprland/language": {
