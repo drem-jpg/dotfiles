@@ -104,6 +104,7 @@ window#waybar {
     color: #5e81ac;
     border-radius: 24px;
     margin-right: 5px;
+    padding-left: 7px;
     font-weight: bold;
 }
 

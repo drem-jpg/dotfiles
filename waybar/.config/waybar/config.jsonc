@@ -151,11 +151,12 @@
           "(.*) - Mozilla Firefox": "󰈹 $1",
           "(.*) - Thunar": " $1",
           "(.*) - mpv": " $1",
-          "(.*) - Discord": " $1",
+          "(.*) - Discord": "  $1",
           "(.*)Spotify Free": " Spotify",
           "(.*)Steam": " Steam",
           
           "(.*) - zsh": " [$1]",
+          "(.*) - nvim": " [$1]",
           "(.*) - wezterm": " [$1]",
           "(.*) - kitty": " [$1]",
           "(.*) - nautilus": " $1",
@@ -176,7 +177,7 @@
   "network": {
         "format-wifi": "󰤨 {essid}",
         "format-disconnected": "󰤭",
-        "format-ethernet": "󰈀 wl3ps0",
+        "format-ethernet": "󰈀",
         "on-click": "rofi-wifi-menu"
       },
   "battery": {
