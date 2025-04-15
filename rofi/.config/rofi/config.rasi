@@ -8,4 +8,4 @@ configuration {
   modi: "window,run,drun,emoji,calc";
 }
 
-@theme "/home/max/.local/share/rofi/themes/nord.rasi"
+@theme "/home/max/.local/share/rofi/themes/mocha.rasi"
