@@ -116,5 +116,5 @@ export VISUAL='nvim'
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 export PATH=$PATH:/home/max/.spicetify
-neofetch
+nitch
 
