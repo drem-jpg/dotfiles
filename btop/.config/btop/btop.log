@@ -36,3 +36,14 @@ btop++ needs an interactive shell to run.
 2025/04/10 (22:05:12) | ===> btop++ v.1.4.0
 2025/04/10 (22:05:12) | ERROR: No tty detected!
 btop++ needs an interactive shell to run.
+
+2025/04/14 (14:24:20) | ===> btop++ v.1.4.0
+2025/04/14 (14:24:20) | ERROR: No tty detected!
+btop++ needs an interactive shell to run.
+
+2025/04/14 (14:24:22) | ===> btop++ v.1.4.0
+2025/04/14 (14:24:22) | ERROR: No tty detected!
+btop++ needs an interactive shell to run.
+
+2025/04/14 (14:38:49) | ===> btop++ v.1.4.0
+2025/04/14 (14:38:49) | WARNING: Failed to join _runner thread on exit!

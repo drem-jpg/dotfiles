@@ -1,3 +1,4 @@
 font-family = JetBrainsMono Nerd Font
+font-style = semibold
 font-size = 12
-theme = nord
+theme = catppuccin-mocha

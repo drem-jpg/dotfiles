@@ -15,7 +15,6 @@
    "hyprland/language": {
   "format": " {}",
   "format-en": "en",
-  "format-fr": "fr",
   "on-click": "hyprctl switchxkblayout logitech-craft next",
   "keyboard-name": "logitech-craft"
 },
@@ -128,14 +127,16 @@
     "format": "󰍛 {}%",
     "format-alt": " {used}/{total} GiB",
     "interval": 5,
-    "on-click-right": "ghostty -e btop"
+    "on-click-right": "btop"
   },
+
   "cpu": {
     "format": " {usage}%",
     "format-alt": "󰍛 {avg_frequency} GHz",
     "interval": 5,
     "on-click-right": "ghostty -e btop"
   },
+
   "disk": {
     "format": "󰋊 {}%",
     "format-alt": "󰋊 {used}/{total} GiB",
