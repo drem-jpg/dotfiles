@@ -75,7 +75,7 @@
     "sort-by-number": true,
   },
   "custom/playerlabel": {
-    "format": "<span>{}</span>",
+    "format": "  <span>{}</span>",
     "return-type": "json",
     "max-length": 48,
     "exec": "playerctl -a metadata --format '{\"text\": \"{{title}} - {{markup_escape(artist)}}\", \"tooltip\": \"{{playerName}} : {{markup_escape(artist)}}\", \"alt\": \"{{status}}\", \"class\": \"{{status}}\"}' -F",
