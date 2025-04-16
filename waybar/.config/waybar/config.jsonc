@@ -130,7 +130,18 @@
 
      "hyprland/window": {
       "format": "{}",
-          "max-length": 30,
+      "rewrite": {
+        "(.*)max@arch:(.*)": "$1  :$2",
+        "(.*) - Brave": "󰖟 $1",
+        "(.*)Spotify Free": "Spotify  ",
+        "(.*) - Thunar": "󰉋 $1",
+        "(.*) - Discord": "  $1",
+        "(.*)Steam": " Steam",
+        "(.*?)-\\s*YouTube(.*)": "$1󰗃", 
+        "(.*?\\s)YouTube(.*)": "$1YouTube 󰗃",
+        "(.*)nvim(.*)": "$1  Neovim -$2"
+    },
+      "max-length": 30,
       "separate-outputs": true
   },
 
