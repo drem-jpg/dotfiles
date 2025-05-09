@@ -1,3 +1,0 @@
-!/bin/sh
-test -n "$*" && args=("$@")
-exec kitty -o initial_window_width=120c -o initial_window_height=35c -o remember_window_size=n -d "$PWD" -e "${args[@]}"
